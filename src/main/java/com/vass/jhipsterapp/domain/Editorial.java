@@ -21,7 +21,7 @@ public class Editorial implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "old")
+    @Column(name = "nombre")
     private String nombre;
 
     @OneToMany(mappedBy = "editorial")
@@ -45,8 +45,8 @@ public class Editorial implements Serializable {
         return this;
     }
 
-    public void setOld(String old) {
-        this.nombre = old;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Set<Book> getBooks() {
@@ -98,7 +98,7 @@ public class Editorial implements Serializable {
     public String toString() {
         return "Editorial{" +
             "id=" + id +
-            ", old='" + nombre + "'" +
+            ", nombre='" + nombre + "'" +
             '}';
     }
 }

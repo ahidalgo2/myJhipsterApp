@@ -19,14 +19,14 @@
             <thead>
                 <tr>
                     <th><span>ID</span></th>
-                    <th><span>Old</span></th>
+                    <th><span>Nombre</span></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="editorial in vm.editorials track by editorial.id">
                     <td><a ui-sref="editorial-detail({id:editorial.id})">{{editorial.id}}</a></td>
-                    <td>{{editorial.old}}</td>
+                    <td>{{editorial.nombre}}</td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

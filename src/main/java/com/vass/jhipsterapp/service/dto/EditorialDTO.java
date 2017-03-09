@@ -13,7 +13,7 @@ public class EditorialDTO implements Serializable {
 
     private Long id;
 
-    private String old;
+    private String nombre;
 
     public Long getId() {
         return id;
@@ -22,12 +22,12 @@ public class EditorialDTO implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-    public String getOld() {
-        return old;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setOld(String old) {
-        this.old = old;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class EditorialDTO implements Serializable {
     public String toString() {
         return "EditorialDTO{" +
             "id=" + id +
-            ", old='" + old + "'" +
+            ", nombre='" + nombre + "'" +
             '}';
     }
 }

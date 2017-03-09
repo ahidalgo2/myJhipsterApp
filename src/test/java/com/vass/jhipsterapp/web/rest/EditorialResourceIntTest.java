@@ -40,8 +40,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = MyJhipsterApp.class)
 public class EditorialResourceIntTest {
 
-    private static final String DEFAULT_OLD = "AAAAAAAAAA";
-    private static final String UPDATED_OLD = "BBBBBBBBBB";
+    private static final String DEFAULT_NOMBRE = "AAAAAAAAAA";
+    private static final String UPDATED_NOMBRE = "BBBBBBBBBB";
 
     @Autowired
     private EditorialRepository editorialRepository;
@@ -86,7 +86,7 @@ public class EditorialResourceIntTest {
      */
     public static Editorial createEntity(EntityManager em) {
         Editorial editorial = new Editorial()
-                .old(DEFAULT_OLD);
+                .nombre(DEFAULT_NOMBRE);
         return editorial;
     }
 
@@ -112,7 +112,7 @@ public class EditorialResourceIntTest {
         List<Editorial> editorialList = editorialRepository.findAll();
         assertThat(editorialList).hasSize(databaseSizeBeforeCreate + 1);
         Editorial testEditorial = editorialList.get(editorialList.size() - 1);
-        assertThat(testEditorial.getOld()).isEqualTo(DEFAULT_OLD);
+        assertThat(testEditorial.getNombre()).isEqualTo(DEFAULT_NOMBRE);
     }
 
     @Test
@@ -147,7 +147,7 @@ public class EditorialResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(editorial.getId().intValue())))
-            .andExpect(jsonPath("$.[*].old").value(hasItem(DEFAULT_OLD.toString())));
+            .andExpect(jsonPath("$.[*].nombre").value(hasItem(DEFAULT_NOMBRE.toString())));
     }
 
     @Test
@@ -161,7 +161,7 @@ public class EditorialResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(editorial.getId().intValue()))
-            .andExpect(jsonPath("$.old").value(DEFAULT_OLD.toString()));
+            .andExpect(jsonPath("$.nombre").value(DEFAULT_NOMBRE.toString()));
     }
 
     @Test
@@ -182,7 +182,7 @@ public class EditorialResourceIntTest {
         // Update the editorial
         Editorial updatedEditorial = editorialRepository.findOne(editorial.getId());
         updatedEditorial
-                .old(UPDATED_OLD);
+                .nombre(UPDATED_NOMBRE);
         EditorialDTO editorialDTO = editorialMapper.editorialToEditorialDTO(updatedEditorial);
 
         restEditorialMockMvc.perform(put("/api/editorials")
@@ -194,7 +194,7 @@ public class EditorialResourceIntTest {
         List<Editorial> editorialList = editorialRepository.findAll();
         assertThat(editorialList).hasSize(databaseSizeBeforeUpdate);
         Editorial testEditorial = editorialList.get(editorialList.size() - 1);
-        assertThat(testEditorial.getOld()).isEqualTo(UPDATED_OLD);
+        assertThat(testEditorial.getNombre()).isEqualTo(UPDATED_NOMBRE);
     }
 
     @Test

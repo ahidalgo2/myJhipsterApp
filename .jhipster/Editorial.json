@@ -10,7 +10,7 @@
     ],
     "fields": [
         {
-            "fieldName": "old",
+            "fieldName": "nombre",
             "fieldType": "String"
         }
     ],

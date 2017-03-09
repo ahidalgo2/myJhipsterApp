@@ -95,7 +95,7 @@
                     resolve: {
                         entity: function () {
                             return {
-                                old: null,
+                                nombre: null,
                                 id: null
                             };
                         }
