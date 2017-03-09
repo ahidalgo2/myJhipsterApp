@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "book",
+            "otherEntityName": "book",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "editorial"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "old",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170309113659",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "entityTableName": "editorial",
+    "pagination": "no"
+}
