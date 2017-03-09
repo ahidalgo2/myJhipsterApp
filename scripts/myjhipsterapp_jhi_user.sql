@@ -35,7 +35,7 @@ CREATE TABLE `jhi_user` (
   `activation_key` varchar(20) DEFAULT NULL,
   `reset_key` varchar(20) DEFAULT NULL,
   `created_by` varchar(50) NOT NULL,
-  `created_date` timestamp NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `reset_date` timestamp NULL DEFAULT NULL,
   `last_modified_by` varchar(50) DEFAULT NULL,
   `last_modified_date` timestamp NULL DEFAULT NULL,
@@ -66,4 +66,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-09 15:42:58
+-- Dump completed on 2017-03-09 16:26:59

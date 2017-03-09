@@ -41,7 +41,7 @@ CREATE TABLE `jhi_persistent_token` (
 
 LOCK TABLES `jhi_persistent_token` WRITE;
 /*!40000 ALTER TABLE `jhi_persistent_token` DISABLE KEYS */;
-INSERT INTO `jhi_persistent_token` VALUES ('wuznSHlLRt3yKPVWq1tC',3,'wKmEXQiyGIxhB94sMAFR','2017-03-09','0:0:0:0:0:0:0:1','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36');
+INSERT INTO `jhi_persistent_token` VALUES ('wuznSHlLRt3yKPVWq1tC',3,'nfPnO7lwfj646PD5Ie2y','2017-03-09','0:0:0:0:0:0:0:1','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36');
 /*!40000 ALTER TABLE `jhi_persistent_token` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-09 15:42:57
+-- Dump completed on 2017-03-09 16:26:59

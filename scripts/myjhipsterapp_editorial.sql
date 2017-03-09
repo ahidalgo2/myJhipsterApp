@@ -24,10 +24,11 @@ DROP TABLE IF EXISTS `editorial`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `editorial` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
   `old` varchar(45) DEFAULT NULL,
+  `new_field_to_editorial` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +37,7 @@ CREATE TABLE `editorial` (
 
 LOCK TABLES `editorial` WRITE;
 /*!40000 ALTER TABLE `editorial` DISABLE KEYS */;
-INSERT INTO `editorial` VALUES (1,NULL,'Editorial planeta');
+INSERT INTO `editorial` VALUES (1,'Editorial Planeta','Editorial planeta',NULL),(4,'Editorial Anaya',NULL,NULL);
 /*!40000 ALTER TABLE `editorial` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-09 15:42:58
+-- Dump completed on 2017-03-09 16:27:00
